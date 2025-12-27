@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Crystal Crown Hotel</title>
+  <link href="images/title.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px 40px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 28px;
+      color: #1a5f7a;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    nav a.active, nav a:hover {
+      color: #1a5f7a;
+    }
+
+    .hero {
+      height: 400px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 48px;
+      font-weight: 300;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1 1 500px;
+    }
+
+    .contact-info h2, .contact-form h2 {
+      color: #1a5f7a;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      background-color: #f1f1f1;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #1a5f7a;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      background-color: #1a5f7a;
+      color: white;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #1a5f7a;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #14485d;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Crystal Crown Hotel</div>
+  <nav>
+   
+    <a href="#" class="active">Contact Us </a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Contact Us</h1>
+</section>
+
+<section class="container">
+  <div class="contact-info">
+    <h2>Get in Touch</h2>
+    <div class="contact-item">
+      <strong>Address</strong>
+      <p>888 Luxury Avenue, Central District, New York, NY 10001</p>
+    </div>
+    <div class="contact-item">
+      <strong>Phone</strong>
+      <p>Reception: +1 (212) 555-0123<br>Reservations: +1 (212) 555-0124</p>
+    </div>
+    <div class="contact-item">
+      <strong>Email</strong>
+      <p>info@crystalcrownhotel.com<br>reservations@crystalcrownhotel.com</p>
+    </div>
+    <div class="contact-item">
+      <strong>Business Hours</strong>
+      <p>Reception: 24/7<br>Reservations: 8 AM - 10 PM</p>
+    </div>
+    <div class="socials">
+      <a href="#">F</a>
+      <a href="#">I</a>
+      <a href="#">X</a>
+      <a href="#">L</a>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form method="post" action="#" onsubmit="return validateForm()">
+      <label>Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label>Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label>Phone</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label>Subject</label>
+      <select id="subject" name="subject">
+        <option>General Inquiry</option>
+        <option>Reservation Question</option>
+        <option>Group Booking</option>
+        <option>Event Planning</option>
+        <option>Feedback</option>
+      </select>
+
+      <label>Message</label>
+      <textarea rows="5" id="message" required></textarea>
+
+      <button type="submit" name="btnsubmit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  function validateForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in all required fields.');
+      return false;
+    }
+
+    alert('Message sent successfully!');
+    return true;
+  }
+</script>
+
+</body>
+</html>

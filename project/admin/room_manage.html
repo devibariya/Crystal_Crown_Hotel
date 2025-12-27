@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Room</title>
+   <link href="images/title.png" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+    <!-- Google Fonts Cinzel -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body 
+    {
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    form 
+    {
+      background: #fff;
+      padding: 35px 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    h2
+     {
+      text-align: center;
+      color: #1cc3b2;
+      margin-bottom: 25px;
+    }
+
+    label 
+    {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"],
+    select,
+    textarea 
+    {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus 
+    {
+      border-color: #1cc3b2;
+      outline: none;
+    }
+
+    textarea 
+    {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="submit"]
+     {
+      background-color: #1cc3b2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover 
+    {
+      background-color: #0f7f72;
+    }
+
+    @keyframes fadeIn 
+    {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) 
+    {
+      form {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="room_manage.php" method="POST" enctype="multipart/form-data" class="room">
+    <h2>Add New Room</h2>
+
+    <label>Room Type</label>
+    <select name="room_type" id="room_type" required>
+      <option value="">--Select--</option>
+      <option value="Deluxe">Deluxe</option>
+      <option value="Luxery">Luxery</option>
+      <option value="Suit">Suit</option>
+      <option value="Single room ">Single room </option>
+      <option value="Double room ">Double room </option>
+      <option value="Standard ">Standard</option>
+      <option value="Family room ">Family room </option>
+    </select>
+
+    <label>Room Category</label>
+    <select name="room_cat" required>
+      <option value="">--Select--</option>
+      <option value="Ac room">AC Room</option>
+      <option value="Non Ac-room">Non-AC Room</option>
+    </select>
+
+    <label>Description</label>
+    <textarea name="description" required></textarea>
+
+    <label>Price per Night</label>
+    <input type="number" name="price" step="1000" required>
+
+    <label>Upload Room Image</label>
+    <input type="file" name="image" accept="image/*" required>
+
+    <label>Status</label>
+    <select name="status" required>
+      <option value="Available">Available</option>
+      <option value="Unavailable">Unavailable</option>
+    </select>
+
+    <input type="submit" value="Add Room">
+  </form>
+
+</body>
+</html>

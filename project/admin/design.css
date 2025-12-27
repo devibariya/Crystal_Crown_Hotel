@@ -1,0 +1,100 @@
+
+    body {
+      background-color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 100px ;
+      padding-top: 50px;
+      margin-top: 50px;
+      color: #0e2737;
+    }
+.hotel-name {
+    font-family: 'Cinzel', serif; /* Cinzel font for hotel name */
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1e2a38;
+    margin-bottom: 0;
+}
+
+.file-name {
+    font-family: Arial, Helvetica, sans-serif; /* Normal font */
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #555;
+    margin-top: 5px;
+}
+
+    h2 {
+      text-align: center;
+      color: #1cc3b2;
+      margin-top: 50px;
+      padding-top: 100px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+		
+            text-align: center;
+            margin-top: 30px;
+             
+        }
+  
+        tr:nth-child(even) {
+            background: white;
+        }
+        html {
+  scroll-behavior: smooth;
+}
+
+    table {
+      width: 100%;
+      width: 100%;
+  padding:100px;
+      max-width: 800px;
+       margin: auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+   
+      border: 1px solid white;
+      text-align: center;
+       padding: 20px;
+       height:50px;
+       width:50px;
+    }
+
+    th {
+      background-color: #1cc3b2;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f0faff;
+    }
+
+    a {
+      color:white;
+      text-decoration: none;
+      background-color:   #0e2737;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    a:hover {
+   text-decoration: none;
+      background-color: #1cc3b2;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+      text-align: center;
+	  
+    }
+
+    .btn-group a {
+      margin: 0 10px;
+    }
+  
